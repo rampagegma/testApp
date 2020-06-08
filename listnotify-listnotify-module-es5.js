@@ -41,7 +41,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"dark\" (click)=\"closeModal()\">\n        <ion-icon name=\"close\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Chi tiết thông báo</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class=\"mainbox\">\n  <div class=\"image-details-box\">\n    <img class=\"imageDetails\" src=\"http://cit.iuh.edu.vn/upload/images/2020/06/ThiTuDo.jpg\" />    \n  </div>\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"dark\" (click)=\"closeModal()\">\n        <ion-icon name=\"close\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Thông báo</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class=\"mainbox\">\n  <div class=\"image-details-box\">\n    <img class=\"imageDetails\" src=\"http://cit.iuh.edu.vn/upload/images/2020/06/ThiTuDo.jpg\" />    \n  </div>\n</ion-content>";
     /***/
   },
 
@@ -243,10 +243,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./src/app/notifydetails/notifydetails.component.ts");
 
     var ListnotifyPage = /*#__PURE__*/function () {
-      function ListnotifyPage(modalController) {
+      function ListnotifyPage(popoverController) {
         _classCallCheck(this, ListnotifyPage);
 
-        this.modalController = modalController;
+        this.popoverController = popoverController;
       }
 
       _createClass(ListnotifyPage, [{
@@ -262,9 +262,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 switch (_context.prev = _context.next) {
                   case 0:
                     _context.next = 2;
-                    return this.modalController.create({
+                    return this.popoverController.create({
                       component: _notifydetails_notifydetails_component__WEBPACK_IMPORTED_MODULE_3__["NotifydetailsComponent"],
-                      cssClass: 'fullScreenModal'
+                      cssClass: 'fullScreenPopup'
                     });
 
                   case 2:
@@ -290,7 +290,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     ListnotifyPage.ctorParameters = function () {
       return [{
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["PopoverController"]
       }];
     };
 
@@ -365,10 +365,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
 
     var NotifydetailsComponent = /*#__PURE__*/function () {
-      function NotifydetailsComponent(modalController) {
+      function NotifydetailsComponent(popoverController) {
         _classCallCheck(this, NotifydetailsComponent);
 
-        this.modalController = modalController;
+        this.popoverController = popoverController;
       }
 
       _createClass(NotifydetailsComponent, [{
@@ -377,7 +377,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "closeModal",
         value: function closeModal() {
-          this.modalController.dismiss();
+          this.popoverController.dismiss();
         }
       }]);
 
@@ -386,7 +386,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     NotifydetailsComponent.ctorParameters = function () {
       return [{
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["PopoverController"]
       }];
     };
 

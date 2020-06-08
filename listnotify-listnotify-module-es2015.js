@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"dark\" (click)=\"closeModal()\">\n        <ion-icon name=\"close\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Chi tiết thông báo</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class=\"mainbox\">\n  <div class=\"image-details-box\">\n    <img class=\"imageDetails\" src=\"http://cit.iuh.edu.vn/upload/images/2020/06/ThiTuDo.jpg\" />    \n  </div>\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-button color=\"dark\" (click)=\"closeModal()\">\n        <ion-icon name=\"close\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n    <ion-title>Thông báo</ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class=\"mainbox\">\n  <div class=\"image-details-box\">\n    <img class=\"imageDetails\" src=\"http://cit.iuh.edu.vn/upload/images/2020/06/ThiTuDo.jpg\" />    \n  </div>\n</ion-content>");
 
 /***/ }),
 
@@ -137,23 +137,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ListnotifyPage = class ListnotifyPage {
-    constructor(modalController) {
-        this.modalController = modalController;
+    constructor(popoverController) {
+        this.popoverController = popoverController;
     }
     ngOnInit() {
     }
     showDetail() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            const modal = yield this.modalController.create({
+            const modal = yield this.popoverController.create({
                 component: _notifydetails_notifydetails_component__WEBPACK_IMPORTED_MODULE_3__["NotifydetailsComponent"],
-                cssClass: 'fullScreenModal'
+                cssClass: 'fullScreenPopup'
             });
             return yield modal.present();
         });
     }
 };
 ListnotifyPage.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["PopoverController"] }
 ];
 ListnotifyPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -197,16 +197,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let NotifydetailsComponent = class NotifydetailsComponent {
-    constructor(modalController) {
-        this.modalController = modalController;
+    constructor(popoverController) {
+        this.popoverController = popoverController;
     }
     ngOnInit() { }
     closeModal() {
-        this.modalController.dismiss();
+        this.popoverController.dismiss();
     }
 };
 NotifydetailsComponent.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["PopoverController"] }
 ];
 NotifydetailsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
